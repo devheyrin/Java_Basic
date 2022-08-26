@@ -1,0 +1,26 @@
+package io;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileViewer {
+	
+	public static void main(String[] args) throws IOException {
+		FileInputStream fis = new FileInputStream(args[0]);
+		FileOutputStream fos = new FileOutputStream(args[1]);
+		int data = 0;
+		while ((data = fis.read()) != -1) {
+			// read - the next byte of data, or -1 if the end of thefile is reached.
+			// -1 = EOF(End Of File) 
+			// 읽어올 데이터가 있을때까지 반복 
+			char c = (char)data;
+			System.out.print(c);
+			fos.write(c);
+		}
+		fis.close();
+		fos.close();
+		
+	}
+
+}
