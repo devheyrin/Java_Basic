@@ -6,7 +6,7 @@ public class Account {
 	int balance = 10000;
 	
 	// 출금 메소드
-	public synchronized void withdraw(int money) {
+	public void withdraw(int money) {
 		
 		synchronized (this) {
 			if(balance >= money) {
@@ -19,6 +19,18 @@ public class Account {
 			}
 		}
 		
+	}
+	
+	public void deposit(int money) {
+		
+		synchronized (this) {
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			balance += money;
+		}
 	}
 
 }
