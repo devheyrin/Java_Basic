@@ -16,5 +16,6 @@ public class Item {
         System.out.println("이름: " + title);
         System.out.println("가격: " + price);
     }
+    
 
 }

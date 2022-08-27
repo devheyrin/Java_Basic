@@ -41,4 +41,14 @@ public class BookItem extends Item implements Lendable {
     	System.out.println("[" + super.title + "] 반납완료");
     	
     }
+    
+    
+    public String toString() {
+    	return "제품번호: " + super.itemNo + 
+    			"제목: " + super.title + 
+    			"가격: " + super.price + 
+    			"저자명: " + this.name + 
+    			"쪽수: " + this.pageNum + 
+    			"출고일자: " + this.outDate;
+    }
 }

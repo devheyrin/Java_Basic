@@ -42,5 +42,14 @@ public class DVDItem extends Item implements Lendable {
     	System.out.println("[" + super.title + "] 반납완료");
     	
     }
+    
+    public String toString() {
+    	return "제품번호: " + super.itemNo + 
+    			"제목: " + super.title + 
+    			"가격: " + super.price + 
+    			"주연배우: " + this.actor + 
+    			"러닝타임: " + this.runtime + 
+    			"출고일자: " + this.outDate;
+    }
 
 }

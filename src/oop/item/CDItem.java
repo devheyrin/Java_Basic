@@ -41,5 +41,14 @@ public class CDItem extends Item implements Lendable {
     	System.out.println("[" + super.title + "] 반납완료");
     	
     }
+    
+    public String toString() {
+    	return "제품번호: " + super.itemNo + 
+    			"제목: " + super.title + 
+    			"가격: " + super.price + 
+    			"가수: " + this.singer + 
+    			"트랙수: " + this.trackNum + 
+    			"출고일자: " + this.outDate;
+    }
 
 }

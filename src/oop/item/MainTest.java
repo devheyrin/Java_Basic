@@ -19,6 +19,8 @@ public class MainTest {
                 System.out.println("3. 책 구매");
                 System.out.println("4. 전체 정보 출력");
                 System.out.println("5. 프로그램 종료");
+                System.out.println("6. 구매내역 파일로 저장");
+                System.out.println("7. 구매내역 파일 읽기");
                 System.out.println("선택 >> ");
    
                 choice = sc.nextInt();
@@ -32,8 +34,12 @@ public class MainTest {
                     case 5:
                         System.out.println("프로그램을 종료합니다.");
                         return;
+                    case 6:
+                    	itemHandler.writeItems();
+                    case 7:
+                    	itemHandler.readItems();
                 }
-        		
+	
         	} else {
         		
         		System.out.println("1. CD 대여");
